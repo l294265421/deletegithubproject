@@ -12,7 +12,8 @@ import org.slf4j.LoggerFactory;
 import com.liyuncong.application.deletegithubproject.net.ContextHttpClient;
 
 /**
- * （基于HttpClient实现）登陆github,删除指定的项目
+ * （基于HttpClient实现）登陆github,删除指定的项目;
+ * 还没能成功
  * @author liyuncong
  *
  */
@@ -29,7 +30,7 @@ public class Main {
 		loginParameters.put("utf8", "✓");
 		loginParameters.put("authenticity_token", authenticityToken);
 		loginParameters.put("login", "294265421@qq.com");
-		loginParameters.put("password", "c159357c");
+		loginParameters.put("password", "******");
 		
 		client.post("https://github.com/session", loginParameters);
 		
