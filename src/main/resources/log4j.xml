@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+<log4j:configuration>
+	<!-- 输出日志到控制台  ConsoleAppender -->   
+    <appender name="console" class="org.apache.log4j.ConsoleAppender">  
+        <param name="Threshold" value="info"></param>  
+        <layout class="org.apache.log4j.PatternLayout">  
+   			<param name="ConversionPattern" value="%d - %c -%-4r [%t] %-5p %X{name} %x - %m%n" />  
+  		</layout>  
+    </appender>  
+    
+    <appender name="app" class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="File" value="d:/test/app.log" />
+		<param name="DatePattern" value="'.'yyyy-MM-dd" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d{yyyy-MM-dd HH:mm:ss,SSS} - %-5p %c [%t] %M:%L - %m%n" />
+		</layout>
+	</appender>
+	
+	<logger name="consoleLogger" additivity="false">
+		<level value="info" />
+		<appender-ref ref="console" />
+	</logger>
+	
+	<root>
+		<level value="info" />
+		<appender-ref ref="app" />
+	</root>
+</log4j:configuration>
+
