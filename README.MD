@@ -8,4 +8,4 @@
 2. 运行com.liyuncong.application.deletegithubproject.main.Main文件
 
 ## 注意
-1. chrome测试使用的chrome浏览器版本为58.0.3029.110 (64-bit)
+1. 测试SeleniumDeleter使用的chrome浏览器版本为58.0.3029.110 (64-bit)
