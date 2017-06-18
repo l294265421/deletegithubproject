@@ -11,6 +11,11 @@ import org.slf4j.LoggerFactory;
 
 import com.liyuncong.application.deletegithubproject.net.ContextHttpClient;
 
+/**
+ * （基于HttpClient）登陆github,删除指定的项目
+ * @author liyuncong
+ *
+ */
 public class HttpClientDeleter extends Deleter {
 	private Logger logger = LoggerFactory.getLogger(HttpClientDeleter.class);
 	private ContextHttpClient client;

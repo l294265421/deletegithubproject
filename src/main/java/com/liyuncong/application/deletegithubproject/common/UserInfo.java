@@ -5,6 +5,11 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Properties;
 
+/**
+ * 
+ * @author liyuncong
+ *
+ */
 public class UserInfo {
 	private String loginName;
 	private String password;

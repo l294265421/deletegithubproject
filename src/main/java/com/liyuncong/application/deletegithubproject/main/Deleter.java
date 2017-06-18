@@ -9,6 +9,11 @@ import org.slf4j.LoggerFactory;
 import com.liyuncong.application.deletegithubproject.common.FileUtil;
 import com.liyuncong.application.deletegithubproject.common.UserInfo;
 
+/**
+ * 
+ * @author liyuncong
+ *
+ */
 public abstract class Deleter {
 	private Logger logger = LoggerFactory.getLogger(Deleter.class);
 	protected UserInfo userInfo;
