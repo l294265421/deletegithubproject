@@ -6,3 +6,6 @@
 ## 使用方法
 1. 先配置conf目录下的project_name和user_info.properites文件，project_name文件里放入要删除的项目名称，一行一个；user_info.properites文件配置github登陆名、密码和用户名。
 2. 运行com.liyuncong.application.deletegithubproject.main.Main文件
+
+## 注意
+1. chrome测试使用的chrome浏览器版本为58.0.3029.110 (64-bit)
