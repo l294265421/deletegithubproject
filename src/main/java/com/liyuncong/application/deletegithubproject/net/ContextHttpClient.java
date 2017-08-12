@@ -55,7 +55,7 @@ public class ContextHttpClient implements Closeable{
 		this.host = host;
 		
 		// 默认header
-		headers = new LinkedList<>();
+		headers = new LinkedList<BasicHeader>();
 		headers.add(new BasicHeader("Accept", "text/html, application/xhtml+xml, image/jxr, */*"));
 		headers.add(new BasicHeader("Accept-Encoding", "gzip, deflate"));
 		headers.add(new BasicHeader("Accept-Language", "zh-CN"));

@@ -31,7 +31,6 @@ public abstract class Deleter {
 				if (!deleteResult) {
 					logger.error("failed to delete project: {}", projectName);
 				}
-				destroy();
 			}
 			logger.info("{} empty project name", emptyProjectNameCounter);
 			
