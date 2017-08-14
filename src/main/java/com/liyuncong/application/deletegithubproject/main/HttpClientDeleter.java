@@ -34,7 +34,7 @@ public class HttpClientDeleter extends Deleter {
 		}
 		authenticityToken = getAuthenticityToken(loginPage);
 		
-		Map<String, String> loginParameters = new HashMap<>();
+		Map<String, String> loginParameters = new HashMap<String, String>();
 		loginParameters.put("commit", "Sign in");
 		loginParameters.put("utf8", "✓");
 		loginParameters.put("authenticity_token", authenticityToken);
@@ -61,7 +61,7 @@ public class HttpClientDeleter extends Deleter {
 			return false;
 		}
 		
-		Map<String, String> deleteParameter = new HashMap<>();
+		Map<String, String> deleteParameter = new HashMap<String, String>();
 		deleteParameter.put("utf8", "✓");
 		deleteParameter.put("authenticity_token", authenticityToken);
 		deleteParameter.put("_method", "delete");
