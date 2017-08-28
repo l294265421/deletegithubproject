@@ -9,3 +9,4 @@
 
 ## 注意
 1. 测试SeleniumDeleter使用的chrome浏览器版本为58.0.3029.110 (64-bit)
+2. 只支持windows操作系统
