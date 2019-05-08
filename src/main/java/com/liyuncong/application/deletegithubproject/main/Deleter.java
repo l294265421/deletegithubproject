@@ -3,6 +3,8 @@ package com.liyuncong.application.deletegithubproject.main;
 import java.io.IOException;
 import java.util.List;
 
+import com.liyuncong.application.deletegithubproject.common.BrowserInfo;
+import com.sun.org.apache.xpath.internal.operations.Bool;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -16,10 +18,11 @@ import com.liyuncong.application.deletegithubproject.common.UserInfo;
  */
 public abstract class Deleter {
 	private Logger logger = LoggerFactory.getLogger(Deleter.class);
-	protected UserInfo userInfo;
-	protected static final String loginPageUrl = "https://github.com/login";
+	UserInfo userInfo;
+	BrowserInfo browserInfo;
+	static final String loginPageUrl = "https://github.com/login";
 	private List<String> projectNames;
-	public void delete() {
+	void delete() {
 		if(loadUserInfo() && loadProjectNames() && init()) {
 			int emptyProjectNameCounter = 0;
 			for (String projectName : projectNames) {
@@ -46,7 +49,17 @@ public abstract class Deleter {
 		}
 		return true;
 	}
-	
+
+	private boolean loadBrowserInfo() {
+		try {
+			browserInfo = new BrowserInfo();
+		} catch (IOException e) {
+			logger.error("failed to load browserInfo:{}", e);
+			return false;
+		}
+		return true;
+	}
+
 	private boolean loadProjectNames() {
 		try {
 			projectNames = FileUtil.readAllLines("conf/project_name");
