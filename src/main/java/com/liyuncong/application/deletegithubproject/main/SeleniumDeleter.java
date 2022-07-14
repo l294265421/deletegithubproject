@@ -18,16 +18,10 @@ public class SeleniumDeleter extends Deleter {
 
 	@Override
 	protected boolean init() {
-//		System.setProperty("webdriver.ie.driver", "driver/IEDriverServer.exe");
-//		WebDriver webDriver = new InternetExplorerDriver();
-//		System.setProperty("webdriver.firefox.bin",
-//				"D:/program files (x86)/Mozilla Firefox/firefox.exe");
-//		WebDriver webDriver = new FirefoxDriver();
-		
 		System.setProperty("webdriver.chrome.bin",
-		"C:/Program Files (x86)/Google/Chrome/Application/chrome.exe");
+		browserInfo.getBrowser());
 		System.setProperty("webdriver.chrome.driver",
-				"driver/chromedriver.exe");
+				browserInfo.getDriver());
 		webDriver = new ChromeDriver();
 		webDriver.get(loginPageUrl);
 		WebElement loginField = webDriver.findElement(By.id("login_field"));

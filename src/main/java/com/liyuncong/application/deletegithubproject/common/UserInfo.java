@@ -17,7 +17,7 @@ public class UserInfo {
 	
 	public UserInfo() throws IOException {
 		Properties properties = new Properties();
-		properties.load(new InputStreamReader(new FileInputStream("conf/user_info.properites"), Constants.FROM_CHARSET));
+		properties.load(new InputStreamReader(new FileInputStream("conf/user_info.properties"), Constants.FROM_CHARSET));
 		loginName = properties.getProperty("login_name");
 		if (loginName == null) {
 			throw new IllegalArgumentException("loginName must be set");
